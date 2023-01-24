@@ -3,7 +3,7 @@
 </script>
 
 
-<div data-aos="fade-up" class="bg-dark p-4 sm:p-6 max-w-screen-md flex-col flex items-center text-gray-500  rounded-lg border border-gray-200 dark:border-gray-700 shadow-md flex  flex-col">
+<div data-aos="fade-up" class="bg-dark pt-8 p-4 sm:p-6 lg:max-w-screen-md md:max-w-screen-md w-full flex-col flex items-center text-gray-500  rounded-lg border border-gray-200 dark:border-gray-700 shadow-md flex  flex-col">
   <h3 class="mb-2 text-6xl font-magic text-center tracking-tight text-red-500">
     Odpowiedzi na pytania
   </h3> 
@@ -12,7 +12,7 @@
   {#each faqList as faq}
   <li style="" class="rounded-lg m-1 hover:bg-white">
     <p on:click={() => faq.showText = !faq.showText} class="p-5 font-medium text-gray-900" id="accordion-collapse-heading-1">
-      {faq.title}  
+      {faq.title} ?
       <!-- <span><i class="icon-question color-viol"></i>  </span> <span><i class="{!faq.showText ? 'icon-arrow-down': 'icon-arrow-up'} color-viol"></i></span> -->
     </p>
     {#if faq.showText}
