@@ -8,7 +8,7 @@
 </svelte:head>
 
 
-<section class="w-full pt-12 pb-6">
+<section class="w-full pt-4 pb-6">
 	<div class="bg-blue-500 max-w-screen-md text-gray-500  rounded-lg border border-gray-200 dark:border-gray-700 shadow-md flex  flex-col">
 	<img class="rounded-t-lg" src="/banner.png" alt=""> 
 	<div class="p-4 sm:p-6 flex flex-col items-center">
@@ -34,10 +34,21 @@
 				</p>
 			</div>
 		</div>
-		<p class="w-12/12 lg:w-10/12 md:w-10/12 font-normal text-gray-900 mb-1 leading-tight">
+        <div class="w-full  flex flex-wrap justify-center content-center flex-row mb-6 rounded-xl">
+          <a href=''>
+            <img src="social/facebook.svg" class="w-20 h-20 m-1 rounded-lg border-2 border-dark bg-blue-600   hover:bg-white hover:border-white  social-hover" alt="">
+
+          </a>
+          <a href=''>
+            <img src="social/github.svg" class="w-20 h-20 m-1 rounded-lg border-2 border-dark bg-blue-600 hover:bg-white hover:border-white social-hover" alt="">
+
+          </a>
+
+        </div>
+		<p class="w-12/12 lg:w-9/12 md:w-10/12 text-center font-normal text-gray-900 mb-1 leading-tight">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 		</p>
-		<p class="w-12/12 lg:w-10/12 md:w-10/12 mb-4 font-normal text-gray-900  leading-tight">
+		<p class="w-12/12 lg:w-9/12 md:w-10/12 text-center  mb-4 font-normal text-gray-900  leading-tight">
 			Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 		</p>
 
@@ -59,18 +70,6 @@
 			</li>
 
 		</ol>
-
-		
-		
-		<div class="flex justify-end w-full">
-			<button type="button" class="max-w-sm text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-5 py-2.5 text-sm text-dark bg-white hover:bg-gray-600 rounded-lg">
-				Zarejestruj się na szkolenie 
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 ml-2">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3">
-				</path>
-			</svg>
-			</button>
-		</div>
 	</div>
 	</div>
 </section>
@@ -86,10 +85,8 @@
 </div>
 </section>
 
-<section class="w-full p-12 flex flex-col items-center">
-	<div class="lg:w-6/12 md:w-6/12 w-11/12 ">
+<section class="w-full flex flex-col items-center">
 		<Faq />
-	</div>
 </section>
 
 <style>
