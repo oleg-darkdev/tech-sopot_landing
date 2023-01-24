@@ -9,11 +9,11 @@ let partnersData = [
 		title: 'Sopot',
 		link: ''
 	},
-	{
-		logoImg: '/partners/pomeranian.png',
-		title: 'Województwo pomorskie',
-		link: ''
-	},
+	// {
+	// 	logoImg: '/partners/pomeranian.png',
+	// 	title: 'Województwo pomorskie',
+	// 	link: ''
+	// },
 	{
 		logoImg: '/partners/na_drodze.png',
 		title: 'Na Drodze Ekspresji',
