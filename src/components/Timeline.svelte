@@ -1,32 +1,39 @@
 <script>
     import workshopsList from '../data/workshopsList';
+
+
+    // let showDescr = false;
 </script>
 
 
     <ol>
-        {#each workshopsList as workshop}
+        {#each workshopsList as workshop (workshop.id)}
         <li 
         data-aos="zoom-in"
         class="p-4 sm:p-6 m-2 rounded-lg  hover:bg-dark">
             <h3 class="mb-2 text-2xl font-bold tracking-tight text-white">
-                <span class="mb-4 mt-4 text-2xl font-bold text-gray-900">#{workshop.id + 1}</span> {workshop.title}
+                <span class="mb-4 mt-4 text-2xl font-bold text-gray-700">#{workshop.id + 1}</span> {workshop.title}
             </h3> 
-            <p class="mt-2 mb-1  text-gray-600 font-normal leading-tight">
-                {workshop.goal}
+            <span class="text-1xl font-bold text-gray-700 ">Cel</span>            
+            <p class=" mb-4  hover:text-white  text-gray-600 font-normal leading-tight">
+              {workshop.goal}
             </p>
-            <!-- text-sm  -->
-            <!-- {#each workshop.descr as descr}
-              <p class="mb-1 font-normal text-gray-600 leading-tight">
-                  {descr}.
-              </p>
-            {/each} -->
-            <p class="mb-2 mt-2 text-1xl font-normal text-gray-600">🏠 {workshop.addres}</p>
-            <!-- <span>{workshop.date}</span>
-            <span>{workshop.maxVisitors}</span>
-            <span>{workshop.startTime}</span>
-            <span>{workshop.endTime}</span> -->
+            {#if workshop.showDescr}
+            <span class="text-1xl font-bold text-gray-700 ">Opis</span>            
+              {#each workshop.descr as descr}
+                <p class="mb-1 font-normal  hover:text-white text-gray-600 leading-tight">
+                    {descr}.
+                </p>
+              {/each}
+            {/if}
+            <div class="m-1 mt-4 flex flex-row justify-center p-2 rounded-lg">
+              <p class="mb-2 text-1xl font-normal text-gray-800"> {workshop.addres}</p>
+                <button type="button" on:click={() => workshop.showDescr = !workshop.showDescr} class="hover:text-dark hover:bg-white bg-gray-900 text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-3 py-1.5 text-base text-white focus:ring-white-300 rounded-lg">
+                    czytać {workshop.showDescr ? 'mniej': 'więcej'}
+                </button>
+            </div>
 
-            <div class="m-1 flex flex-row justify-center p-2 rounded-lg">
+            <div class="m-1  flex flex-row justify-center p-2 rounded-lg">
               <span class="text-2xl font-bold text-gray-800 ">{workshop.duration} min</span>
               <span class="text-2xl font-bold text-gray-800 mr-2 ml-2"> / </span>
               <span class="text-2xl font-bold text-gray-800 ">{workshop.maxVisitors} miejsc</span>
@@ -37,12 +44,16 @@
               <span class="text-2xl font-bold text-gray-800 ">{workshop.endTime}</span>
             </div>
 
-            <div class="mt-4 flex justify-between items-center p-2 rounded-lg">
-                <span class="text-3xl font-bold text-gray-800 ">{workshop.date}</span>
-                <button type="button" class="bg-gray-900 text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-6 py-3.5 text-base text-white hover:bg-dark focus:ring-white-300 rounded-lg">
-                    More
-                </button>
+            <div class="m-1 mb-4 flex justify-between justify-center p-2 rounded-lg">
+                <span class="text-2xl font-bold text-center text-gray-800 ">{workshop.date}</span>
             </div>
+              <a href={workshop.registration} class="bg-gray-900 text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-6 py-3.5 text-base text-white hover:text-dark hover:bg-white focus:ring-white-300 rounded-lg">
+                Zarejestruj się na szkolenie 
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 ml-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3">
+                </path>
+              </svg>
+            </a>
         </li>   
         {/each} 
     </ol>
