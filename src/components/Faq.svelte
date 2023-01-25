@@ -13,7 +13,6 @@
   <li style="" class="rounded-lg m-1 hover:bg-white">
     <p on:click={() => faq.showText = !faq.showText} class="p-5 font-medium text-gray-900" id="accordion-collapse-heading-1">
       {faq.title} ?
-      <!-- <span><i class="icon-question color-viol"></i>  </span> <span><i class="{!faq.showText ? 'icon-arrow-down': 'icon-arrow-up'} color-viol"></i></span> -->
     </p>
     {#if faq.showText}
     <div id="accordion-collapse-body-1" class="p-5 font-light hover:bg-white" aria-labelledby="accordion-collapse-heading-1">
