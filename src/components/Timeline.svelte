@@ -1,8 +1,5 @@
 <script>
     import workshopsList from '../data/workshopsList';
-
-
-    // let showDescr = false;
 </script>
 
 
@@ -26,25 +23,25 @@
                 </p>
               {/each}
             {/if}
-            <div class="m-1 mt-4 flex flex-row justify-center p-2 rounded-lg">
+            <div class="m-1 mt-4 flex hover:bg-white flex-row justify-center p-2 rounded-lg">
               <p class="mb-2 text-1xl font-normal text-gray-800"> {workshop.addres}</p>
                 <button type="button" on:click={() => workshop.showDescr = !workshop.showDescr} class="hover:text-dark hover:bg-white bg-gray-900 text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-3 py-1.5 text-base text-white focus:ring-white-300 rounded-lg">
                     czytać {workshop.showDescr ? 'mniej': 'więcej'}
                 </button>
             </div>
 
-            <div class="m-1  flex flex-row justify-center p-2 rounded-lg">
+            <div class="m-1  flex flex-row justify-center p-2 rounded-lg hover:bg-white">
               <span class="text-2xl font-bold text-gray-800 ">{workshop.duration} min</span>
               <span class="text-2xl font-bold text-gray-800 mr-2 ml-2"> / </span>
               <span class="text-2xl font-bold text-gray-800 ">{workshop.maxVisitors} miejsc</span>
             </div>
-            <div class="m-1 flex flex-row justify-center p-2 rounded-lg">
+            <div class="m-1 flex flex-row justify-center p-2 rounded-lg hover:bg-white">
               <span class="text-2xl font-bold text-gray-800 ">{workshop.startTime}</span>
               <span class="text-2xl font-bold text-gray-800 mr-2 ml-2"> - </span>
               <span class="text-2xl font-bold text-gray-800 ">{workshop.endTime}</span>
             </div>
 
-            <div class="m-1 mb-4 flex justify-between justify-center p-2 rounded-lg">
+            <div class="m-1 mb-4 flex justify-between justify-center p-2 rounded-lg hover:bg-white">
                 <span class="text-2xl font-bold text-center text-gray-800 ">{workshop.date}</span>
             </div>
               <a href={workshop.registration} class="bg-gray-900 text-center font-medium focus:ring-4 focus:outline-none inline-flex items-center justify-center px-6 py-3.5 text-base text-white hover:text-dark hover:bg-white focus:ring-white-300 rounded-lg">
